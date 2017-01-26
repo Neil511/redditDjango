@@ -5,7 +5,9 @@
   </head>
   <body>
     <h1>Reddit</h1>
-    <p>{{ name }}</p>
-    <p>{{ date }}</p>
+    {% for post in posts %}
+      <p>{{ post.name }}</p>
+      <p>{{ post.date }}</p>
+    {% endfor %}  
   </body>
 </html>
