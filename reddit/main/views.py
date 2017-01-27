@@ -4,9 +4,7 @@ from datetime import datetime
 
 # Create your views here.
 def index(request):
-    context = { 'name': 'Name goes here',
-            'date': 'January 23rd, 2017'}
-    return render(request, 'index.html', posts)
+    return render(request, 'index.html', {'posts': posts})
 
 class Post:
     def __init__(self, date, created_by, name, votes, comments, content):
