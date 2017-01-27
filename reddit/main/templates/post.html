@@ -1,0 +1,17 @@
+<div class="post row">
+  <div class="col-md-1">{{ post.votes }}</div>
+  <div class="col-md-2">
+    <button class="upvote">
+      <span class="glyphicon glyphicon-arrow-up" style="color:blue"></span>
+    </button>
+    <button class="downvote">
+      <span class="glyphicon glyphicon-arrow-down" style="color:red"></span>
+    </button>
+  </div>
+  <div class="col-md-9">
+    <h2>{{ post.name }}</h2>
+    <p>{{ post.date }}</p>
+    <p>{{ post.created_by }}</p>
+    <p>{{ post.content }}</p>
+  </div>
+</div>

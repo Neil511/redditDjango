@@ -1,9 +1,11 @@
 {% load staticfiles %}
 <html>
   <head>
-    <h1>Reddit</h1>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
   </head>
   <body>
-    {{ content }}
+    {% block content %}
+    {% endblock %}
   </body>
 </html>
