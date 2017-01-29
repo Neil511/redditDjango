@@ -8,10 +8,9 @@
       <span class="glyphicon glyphicon-arrow-down" style="color:red"></span>
     </button>
   </div>
-  <div class="col-md-9">
-    <h2>{{ post.name }}</h2>
+  <div class="col-md-9"> 
+    <a href="posts/{{ post.id }}/"><h2>{{ post.name }}</h2></a>
     <p>{{ post.date }}</p>
     <p>{{ post.created_by }}</p>
-    <p>{{ post.content }}</p>
   </div>
 </div>
