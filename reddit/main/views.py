@@ -12,3 +12,7 @@ def data(request):
 def posts(request, post_id):
     post = Post.objects.get(id = post_id)
     return render(request, 'postpage.html', {'post': post})
+
+def user(request, username):
+    name = username
+    return render(request, 'user.html', {'name': name})
