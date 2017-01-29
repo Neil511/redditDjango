@@ -2,6 +2,16 @@
 {% block content %}
 <div class="container col-md-8">
   <h1>{{ post.name }}</h1>
+  <p>{{ post.date }}</p>
+  <p>{{ post.created_by }}</p>
   <p>{{ post.content }}</p>
+  <a href="/">Back</a>
+  <!--TODO: Add rows per column and add bootstrap styles -->
+  {% for comment in post.comments %}
+  <div class="row container">
+    {{ for.loopcounter }}
+      <p>{{ comment }}</p>
+    {% endfor %}
+  </div>
 </div>  
 {% endblock %}    
