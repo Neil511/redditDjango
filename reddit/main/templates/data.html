@@ -3,7 +3,24 @@
 <div class="container col-md-8">
     <h1>Data</h1>
     {% for post in posts %}
-    {% include 'post.html' %}
-    {% endfor %}
+      <h2 style="margin-top: 20px">{{ post.name }}</h2>
+      <p>{{ post.date }}</p>
+      <p>{{ post.created_by }}</p>
+      <p>{{ post.votes }}</p>
+      {% if post.comments|length > 0 %}
+        {% for comment in comments %}
+        <p>{{ forloop.counter0 }}</p>
+          <p>{{ comment }}</p>
+        {% endfor %}
+      {% else %}
+        <p>"No comments!"</p>
+      {% endif %}
+      <p>{{ post.content }}</p>
+      {% endfor %}
+    <form action="/new_post/" method="post">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="Post"/>
+    </form>
 </div>  
 {% endblock %}    
